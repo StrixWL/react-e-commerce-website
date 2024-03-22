@@ -1,0 +1,66 @@
+.card {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+@media (max-width: 992px) {
+  .card {
+    max-width: calc(
+      25% - 20px
+    );
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    max-width: calc(
+      33.33% - 20px
+    );
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    max-width: calc(
+      50% - 20px
+    );
+  }
+}
+
+.media {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 16px;
+}
+
+.badge {
+  top: 0;
+  left: 20px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 12px;
+  }
+
+  .badge {
+    top: 12px;
+    left: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding: 8px;
+  }
+
+  .badge {
+    top: 8px;
+    left: 8px;
+  }
+}
