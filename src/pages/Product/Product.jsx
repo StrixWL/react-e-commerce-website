@@ -1,5 +1,13 @@
+import { useState } from "react";
+import ProductDetails from "../../components/productsDetails/ProductDetails";
+
 const Product = () => {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+
+  return (
+    <>
+      <ProductDetails />
+    </>
+  );
 };
 
 export default Product;
