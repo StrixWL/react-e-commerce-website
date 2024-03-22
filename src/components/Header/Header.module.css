@@ -1,0 +1,28 @@
+.header {
+    position: sticky;
+    top: -151px;
+    transition: top .3s;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 151px;
+    width: 100%;
+    background-color: #0A0A0A;
+    font-family: Questrial;
+}
+
+.header.active {
+    /* position: fixed; */
+    top: 0;
+    /* background-color: red; */
+}
+
+.search {
+    width: 25px;
+}
+
+.nav-bar {
+    margin-top: 36px;
+}
