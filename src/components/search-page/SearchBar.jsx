@@ -1,32 +1,51 @@
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
+import { Grid } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
+import InputAdornment from "@mui/material/InputAdornment";
 import "./SearchBar.css";
 
 const SearchBar = () => {
   return (
-    <section>
-      <h3>I am the search bar</h3>
-      <Stack spacing={2} sx={{ width: 300 }}>
-        <Autocomplete
-          id="free-solo-demo"
-          freeSolo
-          options={top100Films.map((option) => option.title)}
-          renderInput={(params) => <TextField {...params} label="freeSolo"  InputLabelProps={{
-            sx: { color: "black" } // Set the label color to black
-          }}/>}
-          ListboxProps={{
-            className: "scrollBar",
-          }}
-          sx={{
-            "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-              {
-                borderColor: "black",
-                color: "black",
-              },
-          }}
-        />
-      </Stack>
+    <section className="search-bar-section">
+      <Grid container justifyContent="center">
+        <Grid item xs={12} sm={6}>
+          <Stack spacing={2} sx={{ width: "100%" }}>
+            <Autocomplete
+              id="free-solo-demo"
+              freeSolo
+              options={top100Films.map((option) => option.title)}
+              renderInput={(params) => (
+                <TextField
+                  {...params}
+                  label="Search Products"
+                  InputProps={{
+                    ...params.InputProps,
+                    endAdornment: (
+                      <InputAdornment>
+                        <SearchIcon />
+                      </InputAdornment>
+                    ),
+                  }}
+                  sx={{
+                    "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                      {
+                        borderColor: "black",
+                      },
+                    "& .MuiOutlinedInput-root": {
+                      borderRadius: "26px",
+                    },
+                  }}
+                />
+              )}
+              ListboxProps={{
+                className: "scrollBar",
+              }}
+            />
+          </Stack>
+        </Grid>
+      </Grid>
     </section>
   );
 };

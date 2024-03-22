@@ -3,10 +3,7 @@ import SearchBar from "../../components/search-page/SearchBar";
 const Search = () => {
   return (
 	<section className="search-section">
-
-		{/* // NAVBAR */}
 		<header>
-			<h2>Search results</h2>
 		{/* // SEARCH BAR */}
 		<SearchBar />
 		</header>
@@ -17,7 +14,6 @@ const Search = () => {
 		<footer>
 			{/* footer */}
 		</footer>
-		
 	</section>
 
   );
