@@ -14,15 +14,5 @@
 }
 
 .header.active {
-    /* position: fixed; */
     top: 0;
-    /* background-color: red; */
-}
-
-.search {
-    width: 25px;
-}
-
-.nav-bar {
-    margin-top: 36px;
 }

@@ -1,7 +1,10 @@
 import styles from "./Header.module.css";
 import searchLogo from "./../../assets/search.svg";
+import headerLogo from "./../../assets/headerLogo.webp";
 import NavBar from "./NavBar/NavBar";
 import useScrollDirection from "../../hooks/useScrollDirection";
+import { Link } from "react-router-dom";
+import UtilitySection from "./UtilitySection/UtilitySection";
 
 const Header = () => {
 	const scrollDirection = useScrollDirection()
@@ -12,8 +15,8 @@ const Header = () => {
 				(scrollDirection == "up" ? " " + styles.active : "")
 			}
 		>
-			<img className={styles.search} src={searchLogo} alt="Search" />
-			<NavBar className={styles["nav-bar"]} />
+			<UtilitySection />
+			<NavBar />
 		</header>
 	);
 };

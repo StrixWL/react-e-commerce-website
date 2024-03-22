@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./NavBar.module.css";
 
-const NavBar = ({ className }) => {
+const NavBar = () => {
     const location = useLocation();
     return (
-        <nav className={className}>
+        <nav>
             <ul className={styles['nav-items']}>
                 <li>
                     <Link to="/" className={location.pathname === "/" ? styles.active : ""}>Home</Link>
