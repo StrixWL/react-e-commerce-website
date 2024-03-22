@@ -23,11 +23,11 @@ const ProductDetails = () => {
     setSelectedImage(newImage);
   };
   return (
-    <div className="flex flex-col pb-14 bg-white">
-      <div className="self-center mt-20 w-full max-w-[1201px] max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col px-15 grow max-md:mt-10 max-md:max-w-full">
+    <div className="flex flex-col pb-14 bg-white ">
+      <div className="self-center mt-20 w-full max-w-[1201px] max-md:mt-10 max-md:max-w-full ">
+        <div className="flex gap-5 max-md:flex-col max-md:gap-0 ">
+          <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full h-auto " >
+            <div className="flex flex-col px-15  top-0 max-md:mt-10  max-md:max-w-full sticky  ">
               <div className="mb-4">
                 <ZoomImage src={mainImage} alt="Product Image" />
               </div>
@@ -97,7 +97,42 @@ const ProductDetails = () => {
                     designed to honor the rich Imazighen legacy, this T-shirt is
                     a wearable testament to a timeless tradition. Wear it not
                     just for style, but as a symbol of cultural pride and
-                    history.
+                    history. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Atque esse nisi sunt sit, delectus quam blanditiis
+                    eveniet in unde fugit maxime ipsum laboriosam nostrum
+                    debitis soluta architecto expedita sapiente. Asperiores!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse quas modi nulla asperiores, amet atque doloremque
+                    doloribus quae, commodi totam beatae dolor consequatur
+                    cupiditate obcaecati deleniti vitae quos repellat officia?
+                    Discover the essence of Imazighen culture with our Imazighen
+                    Essence T-Shirt. More than just a piece of clothing, it's a
+                    celebration of heritage and style. Crafted for comfort and
+                    designed to honor the rich Imazighen legacy, this T-shirt is
+                    a wearable testament to a timeless tradition. Wear it not
+                    just for style, but as a symbol of cultural pride and
+                    history. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Atque esse nisi sunt sit, delectus quam blanditiis
+                    eveniet in unde fugit maxime ipsum laboriosam nostrum
+                    debitis soluta architecto expedita sapiente. Asperiores!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse quas modi nulla asperiores, amet atque doloremque
+                    doloribus quae, commodi totam beatae dolor consequatur
+                    cupiditate obcaecati deleniti vitae quos repellat officia?
+                    Discover the essence of Imazighen culture with our Imazighen
+                    Essence T-Shirt. More than just a piece of clothing, it's a
+                    celebration of heritage and style. Crafted for comfort and
+                    designed to honor the rich Imazighen legacy, this T-shirt is
+                    a wearable testament to a timeless tradition. Wear it not
+                    just for style, but as a symbol of cultural pride and
+                    history. Lorem ipsum dolor, sit amet consectetur adipisicing
+                    elit. Atque esse nisi sunt sit, delectus quam blanditiis
+                    eveniet in unde fugit maxime ipsum laboriosam nostrum
+                    debitis soluta architecto expedita sapiente. Asperiores!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Esse quas modi nulla asperiores, amet atque doloremque
+                    doloribus quae, commodi totam beatae dolor consequatur
+                    cupiditate obcaecati deleniti vitae quos repellat officia?
                   </div>
                 </div>
               </div>

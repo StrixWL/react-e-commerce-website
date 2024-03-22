@@ -11,6 +11,7 @@
     width: 100%;
     background-color: #0A0A0A;
     font-family: Questrial;
+    z-index: 1;
 }
 
 .header.active {
