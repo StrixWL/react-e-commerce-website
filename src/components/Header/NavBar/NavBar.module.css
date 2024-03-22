@@ -1,0 +1,20 @@
+.nav-items {
+    list-style: none;
+    display: flex;
+    gap: 35px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, .75);
+    font-size: 15px;
+    letter-spacing: .7px;
+}
+
+.nav-items a:hover, .nav-items li .active {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
