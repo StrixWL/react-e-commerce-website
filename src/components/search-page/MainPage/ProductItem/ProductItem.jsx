@@ -8,7 +8,6 @@ import "./ProductItem.css";
 const ProductItem = () => {
   return (
     <section className="product-item-section">
-      <h3>hello from the product item</h3>
       <Card className="card">
           <Badge
             badgeContent="Sale"
