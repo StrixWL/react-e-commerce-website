@@ -1,0 +1,21 @@
+.location-selector-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.location-selector {
+    color: white;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding-right: 8px;
+}
+
+.location-selector:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.location-selector img {
+    width: 11px;
+}

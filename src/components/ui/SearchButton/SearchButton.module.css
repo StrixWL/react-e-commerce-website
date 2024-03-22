@@ -1,0 +1,12 @@
+
+.search-button {
+    width: 24px;
+}
+
+.search-button:hover {
+    transform: translate(0, -50%) scale(1.1);
+}
+
+.search-button img {
+    height: 100%;
+}

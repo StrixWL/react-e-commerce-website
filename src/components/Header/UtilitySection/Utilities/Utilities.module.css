@@ -1,0 +1,25 @@
+
+.utilities {
+    display: flex;
+    justify-content: end;
+    width: 300px;
+}
+
+.login, .cart {
+    width: 22px;
+    display: flex;
+}
+
+.login {
+    padding: 13px;
+    width: 50px;
+
+}
+
+.cart {
+    width: 50px;
+}
+
+.login:hover, .cart:hover {
+    transform: scale(1.1);
+}

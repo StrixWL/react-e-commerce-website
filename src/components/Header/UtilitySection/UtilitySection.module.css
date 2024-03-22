@@ -15,27 +15,14 @@
 }
 
 .search {
-    display: flex;
+    width: 300px;
+    height: 100%;
+    align-items: center;
+    position: relative;
 }
 
 .search-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    padding: 0;
-    flex: 1;
-    width: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
 }
-
-.search-button img {
-    width: 100%;
-}
-
-.utilities {
-    flex: 1;
-}
-
-.utilities img {
-    width: 100%;
-}
-
