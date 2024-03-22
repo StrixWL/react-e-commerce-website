@@ -1,31 +1,33 @@
 
 .utility-section {
-    height: 70px;
+    height: 95px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    max-width: 1150px;
+    width: 87%;
+    max-width: 1135px;
 }
 
 .header-logo {
-    flex: 30;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
 .search {
+    display: flex;
+}
+
+.search-button {
     border: none;
     background-color: transparent;
     cursor: pointer;
-    width: 26px;
     padding: 0;
-    position: relative;
-    top: 4px;
     flex: 1;
+    width: 24px;
 }
 
-.search img {
+.search-button img {
     width: 100%;
 }
 
@@ -36,3 +38,4 @@
 .utilities img {
     width: 100%;
 }
+
