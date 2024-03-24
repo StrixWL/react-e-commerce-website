@@ -35,6 +35,7 @@
 
 .dropdown-item {
     margin: 20px 0;
+    /* height: 45px; */
     color: rgba(255, 255, 255, .75);
     white-space: wrap;
 }

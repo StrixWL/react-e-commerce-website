@@ -13,7 +13,6 @@
 .login {
     padding: 13px;
     width: 50px;
-
 }
 
 .cart {
@@ -22,4 +21,33 @@
 
 .login:hover, .cart:hover {
     transform: scale(1.1);
+}
+
+.search {
+    display: none;
+    width: 50px;
+    justify-content: right;
+    align-items:end;
+}
+
+.search img {
+    transform: scale(.6);
+}
+
+@media screen and (max-width: 989px) {
+    .search {
+        display: flex;
+    }
+    .dropdown-menu {
+        display: none;
+    }
+    .utilities {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .login {
+        display: none;
+    }
 }

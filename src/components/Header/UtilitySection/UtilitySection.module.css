@@ -9,9 +9,9 @@
 }
 
 .header-logo {
-    flex: 1;
     display: flex;
     justify-content: center;
+    flex-grow: 1;
 }
 
 .search {
@@ -25,4 +25,34 @@
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+}
+
+.search .search-button:hover {
+    transform: translate(0, -50%) scale(1.1);
+}
+
+.toggle-navbar {
+    width: 200px;
+    display: none;
+}
+
+.toggle-navbar-btn {
+    transition: transform .15s;
+    width: 20px;
+}
+
+.toggle-navbar-btn:hover {
+    transform: scale(1.12);
+}
+
+@media screen and (max-width: 989px) {
+    .utility-section {
+        width: 90%;
+    }
+    .search {
+        display: none;
+    }
+    .toggle-navbar {
+        display: flex;
+    }
 }

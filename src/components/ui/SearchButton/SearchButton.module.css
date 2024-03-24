@@ -4,7 +4,7 @@
 }
 
 .search-button:hover {
-    transform: translate(0, -50%) scale(1.1);
+    transform: scale(1.1);
 }
 
 .search-button img {

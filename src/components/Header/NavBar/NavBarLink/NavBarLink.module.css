@@ -1,0 +1,22 @@
+.navbar-link a {
+    color: rgba(255, 255, 255, .75);
+    font-size: 15px;
+    letter-spacing: .7px;
+}
+
+.navbar-link a.active {
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+@media screen and (max-width: 989px) {
+    .navbar-link a.active {
+        background-color: #141414;
+        text-decoration: none;
+    }
+    .navbar-link a {
+        color: white;
+        font-size: 19px;
+    }
+}

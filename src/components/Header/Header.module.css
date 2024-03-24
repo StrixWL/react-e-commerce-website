@@ -17,3 +17,13 @@
 .header.active {
     top: 0;
 }
+
+@media screen and (max-width: 989px) {
+    .header {
+        top: -76px;
+        height: 76px;
+    }
+    .header.active-mob {
+        top: 0;
+    }
+}

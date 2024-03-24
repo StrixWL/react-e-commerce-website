@@ -5,6 +5,7 @@ import cartIcon from "../../../../assets/cart.svg";
 import DropDownMenu from "../../../ui/DropDownMenu/DropDownMenu";
 import useLocation from "../../../../hooks/useLocation";
 import { locations } from "../../../../data/locations";
+import SearchButton from "../../../ui/SearchButton/SearchButton";
 
 const Utilities = () => {
 	const { currentLocation, changeLocation } = useLocation();
@@ -14,7 +15,9 @@ const Utilities = () => {
 				items={locations}
 				current={currentLocation}
 				onChange={changeLocation}
+				className={styles['dropdown-menu']}
 			/>
+			<SearchButton className={styles['search']} />
 			<Link className={styles["login"]} to="/login">
 				<img src={loginIcon}></img>
 			</Link>
