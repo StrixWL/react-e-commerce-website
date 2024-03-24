@@ -2,9 +2,22 @@
   --border-width: 0.1rem;
 }
 
-h2{
+.full-unstyled-link {
+  text-decoration: none;
   font-family: "Archivo";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: bold;
 }
+
+.price-item {
+  font-family: "Questrial", sans-serif;
+}
+
+.price-item--last {
+  color: rgb(10, 10, 10);
+}
+
 .product-item-section {
   margin-bottom: 20px;
   overflow: hidden; /* Ensure content doesn't overflow beyond the borders */
@@ -31,12 +44,27 @@ h2{
 
 @media (max-width: 989px) {
   .product-item-section {
-    width: calc((50% - var(--border-width) * 2) - 20px); /* Adjusted width for screens under 989px */
+    width: calc(
+      (50% - var(--border-width) * 2) - 20px
+    ); /* Adjusted width for screens under 989px */
+  }
+  .full-unstyled-link {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.06rem;
+  }
+  .price-item--last {
+    font-size: 1.1rem;
   }
 }
 
 @media (max-width: 749px) {
   .product-item-section {
-    width: calc((100% - var(--border-width) * 2) - 20px); /* Adjusted width for screens under 989px */
+    width: calc(
+      (100% - var(--border-width) * 2) - 20px
+    ); /* Adjusted width for screens under 989px */
+  }
+  .full-unstyled-link {
+    font-size: 1.3rem;
   }
 }
