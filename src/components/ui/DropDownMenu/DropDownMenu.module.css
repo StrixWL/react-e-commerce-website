@@ -30,7 +30,7 @@
     right: -21px;
     border: 1px solid rgba(255, 255, 255, .1);
     border-radius: 20px;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .dropdown-item {
@@ -58,4 +58,10 @@
     color: white;
     text-decoration: underline;
     text-underline-offset: 3px;
+}
+
+.items-wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    border-radius: 20px;
 }
