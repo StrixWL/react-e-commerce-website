@@ -25,6 +25,7 @@ const Product = () => {
           description={productData.description}
           colors={productData.color}
           sizes={productData.size}
+          productId={productId}
         />
       )}
     </>

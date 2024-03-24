@@ -8,6 +8,7 @@ import QuantitySelector from "./productInfos/QuantitySelector";
 import Addons from "./addOns/Addons";
 import Button from "../../ui/Button";
 import PropTypes from "prop-types";
+import { useCart } from "../../store/cartContext/cartContext";
 
 const ProductDetails = ({
   title,
@@ -16,6 +17,7 @@ const ProductDetails = ({
   oldPrice,
   description,
   colors,
+  productId,
   sizes
 }) => {
   const [mainImage, setMainImage] = useState(imageTreeSrc[0]);
@@ -23,12 +25,24 @@ const ProductDetails = ({
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
 
   const changeMainImage = (newImage) => {
     setMainImage(newImage);
     setSelectedImage(newImage);
   };
-
+  const handleAddToCart = () => {
+    const product = {
+      id: productId, // Make sure to pass productId as prop or retrieve it in this component
+      title,
+      price,
+      image: mainImage,
+      color: selectedColor,
+      size: selectedSize,
+      quantity: quantity,
+    };
+    addToCart(product, quantity);
+  };
   return (
     <div className="flex flex-col pb-14 bg-white ">
       <div className="self-center mt-20 w-full max-w-[1201px] max-md:mt-10 max-md:max-w-full ">
@@ -75,7 +89,8 @@ const ProductDetails = ({
                     <div className="w-full space-y-3">
                       <Button
                         className="px-4 py-3 rounded-3xl cursor-pointer w-full bg-white border-2 text-black"
-                        click={() => console.log("button clicked")}
+                        click={handleAddToCart}
+                       // click={() => console.log("button clicked")}
                         name={"Add to cart"}
                       />
                       <Button

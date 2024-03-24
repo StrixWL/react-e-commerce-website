@@ -17,6 +17,7 @@
 
 .cart {
     width: 50px;
+    cursor: pointer;
 }
 
 .login:hover, .cart:hover {

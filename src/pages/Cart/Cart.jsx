@@ -1,0 +1,81 @@
+import React, { useState } from "react";
+import Button from "../../ui/Button";
+import { useCart } from "../../store/cartContext/cartContext";
+import Header from "../../components/shoppCart/Header";
+import MyCart from "../../components/shoppCart/MyCart";
+
+const Cart = () => {
+  const [cartVisible, setCartVisible] = useState(true);
+  const { cartItems, removeFromCart } = useCart();
+  const [quantity, setQuantity] = useState(1);
+
+  const formatPrice = (price) =>
+    parseFloat(price.replace("€", "").replace(",", "."));
+  const total = cartItems
+    .reduce((acc, item) => acc + formatPrice(item.price) * item.quantity, 0)
+    .toFixed(2);
+
+  const closeCart = () => setCartVisible(false);
+  const goToLandingPage = () => setCartVisible(false);
+  return (
+    <>
+      {cartVisible && (
+        <section
+          className="relative z-10 ease-in-out duration-1000 from:opacity-100 from overflow-hidden"
+          aria-labelledby="slide-over-title"
+          role="dialog"
+          aria-modal="true"
+        >
+          <div
+            className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+            onClick={closeCart}
+          ></div>
+          <>
+            <div className="fixed inset-0 overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden">
+                <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
+                  <div className="pointer-events-auto w-screen max-w-md">
+                    <div className="flex h-full flex-col overflow-y-hidden bg-white shadow-xl">
+                      <div className="flex-1 overflow-y-auto  sm:px-6">
+                        <Header closeCart={closeCart} />
+                        <MyCart
+                          goToLandingPage={goToLandingPage}
+                          cartItems={cartItems}
+                          setQuantity={setQuantity}
+                          formatPrice={formatPrice}
+                          removeFromCart={removeFromCart}
+                        />
+                      </div>
+
+                      <section className="border-t border-gray-200 px-4 py-6 sm:px-6">
+                        <div className="flex justify-between text-base font-medium text-gray-900">
+                          <p>Estimated total</p>
+                          <p> {total}</p>
+                        </div>
+                        <p className="mt-0.5 text-sm text-gray-500 overflow-hidden ">
+                          Tax included. Shipping and discounts calculated at
+                          checkout.
+                        </p>
+                        <div className="mt-6">
+                          <Button
+                            click={closeCart}
+                            className={
+                              "px-4 py-3 rounded-3xl cursor-pointer w-full bg-black text-white"
+                            }
+                            name={"Check Out"}
+                          />
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        </section>
+      )}
+    </>
+  );
+};
+
+export default Cart;

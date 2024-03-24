@@ -6,9 +6,12 @@ import DropDownMenu from "../../../ui/DropDownMenu/DropDownMenu";
 import useLocation from "../../../../hooks/useLocation";
 import { locations } from "../../../../data/locations";
 import SearchButton from "../../../ui/SearchButton/SearchButton";
+import { useState } from "react";
+import Cart from "../../../../pages/Cart/Cart";
 
 const Utilities = () => {
 	const { currentLocation, changeLocation } = useLocation();
+	const [showCart, setShowCart] = useState(false); 
 	return (
 		<div className={styles["utilities"]}>
 			<DropDownMenu
@@ -21,9 +24,11 @@ const Utilities = () => {
 			<Link className={styles["login"]} to="/login">
 				<img src={loginIcon}></img>
 			</Link>
-			<Link className={styles["cart"]} to="/cart">
+			<div className={styles["cart"]} onClick={() => setShowCart(!showCart)}>
 				<img src={cartIcon}></img>
-			</Link>
+			</div>
+			{showCart && <Cart />} 
+		
 		</div>
 	);
 };
