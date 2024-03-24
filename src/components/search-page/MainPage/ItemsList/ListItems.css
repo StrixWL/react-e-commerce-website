@@ -1,18 +1,18 @@
 /* ListItems.css */
 
 .list-items-section {
-    /* padding: 20px; Adjust section padding as needed */
+  padding: 0 5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+}
+
+@media (max-width: 749px) {
+  .list-items-section {
+    padding: 0;
   }
-  
-  .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  @media (max-width: 768px) {
-    .product-list {
-      justify-content: center; /* Center items on smaller screens */
-    }
-  }
-  
+}

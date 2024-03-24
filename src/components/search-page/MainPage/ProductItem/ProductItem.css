@@ -1,7 +1,18 @@
-.card {
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
+:root {
+  --border-width: 0.1rem;
+}
+
+h2{
+  font-family: "Archivo";
+}
+.product-item-section {
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensure content doesn't overflow beyond the borders */
+  border-radius: 1.8rem;
+  border-width: 0.1rem;
+  border-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc((25% - var(--border-width) * 2) - 18px);
 }
 
 .media {
@@ -18,3 +29,14 @@
   left: 20px;
 }
 
+@media (max-width: 989px) {
+  .product-item-section {
+    width: calc((50% - var(--border-width) * 2) - 20px); /* Adjusted width for screens under 989px */
+  }
+}
+
+@media (max-width: 749px) {
+  .product-item-section {
+    width: calc((100% - var(--border-width) * 2) - 20px); /* Adjusted width for screens under 989px */
+  }
+}

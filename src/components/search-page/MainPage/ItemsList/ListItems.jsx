@@ -8,6 +8,8 @@ const ListItems = () => {
         <ProductItem />
         <ProductItem />
         <ProductItem />
+        <ProductItem />
+        <ProductItem />
       </section>
     </section>
   );
