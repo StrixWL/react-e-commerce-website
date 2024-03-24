@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import "./ProductItem.css";
+import getProductIdByName from "../../../../utils/searchFunctions/getIdFromTitle";
 
 const ProductItem = ({
   title,
@@ -14,7 +16,7 @@ const ProductItem = ({
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imageSrc, setImageSrc] = useState(beforeHoverImage);
-
+  const navigate = useNavigate();
   const handleMouseEnter = () => {
     setIsHovered(true);
     setImageSrc(afterHoverImage);
@@ -23,6 +25,11 @@ const ProductItem = ({
   const handleMouseLeave = () => {
     setIsHovered(false);
     setImageSrc(beforeHoverImage);
+  };
+
+  const handleClickTitle = () => {
+    const productId = getProductIdByName(title);
+    navigate(`/product/${productId}`);
   };
 
   return (
@@ -45,7 +52,11 @@ const ProductItem = ({
             component="h2"
             className={isHovered ? "underline" : ""}
           >
-            <a href="/products/" className="full-unstyled-link">
+            <a
+              href="#"
+              onClick={handleClickTitle}
+              className="full-unstyled-link"
+            >
               {title}
             </a>
           </Typography>

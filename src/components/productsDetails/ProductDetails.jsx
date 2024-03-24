@@ -99,14 +99,5 @@ const ProductDetails = ({
   );
 };
 
-ProductDetails.propTypes = {
-  title: PropTypes.string.isRequired,
-  imageTreeSrc: PropTypes.arrayOf(PropTypes.string).isRequired,
-  price: PropTypes.string.isRequired,
-  oldPrice: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  colors: PropTypes.arrayOf(PropTypes.string).isRequired,
-  sizes: PropTypes.arrayOf(PropTypes.string).isRequired
-};
 
 export default ProductDetails;
