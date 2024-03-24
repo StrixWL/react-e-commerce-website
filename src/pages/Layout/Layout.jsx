@@ -3,6 +3,8 @@ import Header from "../../components/Header/Header";
 import styles from './Layout.module.css'
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import Footer from "../../components/Footer/Footer";
+import EmailSub from "../../components/EmailSub/EmailSub";
 
 const Layout = () => {
 	const location = useLocation()
@@ -15,8 +17,9 @@ const Layout = () => {
 			<div className="pb-[500px]">
 
 			</div>
+			<EmailSub />
+			<Footer />
 		</div>
-
 	);
 };
 
