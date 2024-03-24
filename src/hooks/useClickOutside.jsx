@@ -5,7 +5,7 @@ const useClickOutside = (callback) => {
     useEffect(() => {
         const handleClick = (event) => {
             if (!ref.current.contains(event.target))
-                callback(false)
+                callback()
         }
         window.addEventListener('mousedown', handleClick)
         return () => window.removeEventListener('mousedown', handleClick)
