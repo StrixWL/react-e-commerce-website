@@ -23,7 +23,7 @@ const SearchBar = () => {
                   InputProps={{
                     ...params.InputProps,
                     endAdornment: (
-                      <InputAdornment>
+                      <InputAdornment position="end">
                         <SearchIcon />
                       </InputAdornment>
                     ),
