@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Stack from "@mui/material/Stack";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -8,9 +8,16 @@ import InputAdornment from "@mui/material/InputAdornment";
 import "./SearchBar.css";
 import { ProductTitlesContext } from "../../../store/searchContext/searchContext";
 
+const SearchBar = ({ onSearch }) => {
+  const productTitles = useContext(ProductTitlesContext);
+  const [inputValue, setInputValue] = useState("");
 
-const SearchBar = () => {
-  const ProductTitles = useContext(ProductTitlesContext);
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      onSearch(inputValue.trim());
+    }
+  };
+
   return (
     <section className="search-bar-section">
       <Grid container justifyContent="center">
@@ -19,11 +26,16 @@ const SearchBar = () => {
             <Autocomplete
               id="free-solo-demo"
               freeSolo
-              options={ProductTitles}
+              options={productTitles}
+              inputValue={inputValue}
+              onInputChange={(event, newInputValue) =>
+                setInputValue(newInputValue)
+              }
               renderInput={(params) => (
                 <TextField
                   {...params}
                   label="Search Products"
+                  onKeyDown={handleKeyDown}
                   InputProps={{
                     ...params.InputProps,
                     endAdornment: (
