@@ -20,7 +20,7 @@
 
 .product-item-section {
   margin-bottom: 20px;
-  overflow: hidden; /* Ensure content doesn't overflow beyond the borders */
+  overflow: hidden;
   border-radius: 1.8rem;
   border-width: 0.1rem;
   border-color: black;
@@ -46,7 +46,7 @@
   .product-item-section {
     width: calc(
       (50% - var(--border-width) * 2) - 20px
-    ); /* Adjusted width for screens under 989px */
+    );
   }
   .full-unstyled-link {
     font-size: 1.3rem;
@@ -62,7 +62,7 @@
   .product-item-section {
     width: calc(
       (100% - var(--border-width) * 2) - 20px
-    ); /* Adjusted width for screens under 989px */
+    );
   }
   .full-unstyled-link {
     font-size: 1.3rem;
