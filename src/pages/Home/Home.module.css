@@ -1,39 +1,14 @@
 .intro {
     position: relative;
-    /* background-color: black; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .intro img {
-    /* width: 100%; */
-    /* height: calc(100vh - 151px);
-    max-height: 1173.2px;
-    min-width: 586px; */
     object-fit: cover;
     width: 100%;
     height: calc(100vh - 151px);
-}
-
-.featured-products {
-    width: 570px;
-    height: 270px;
-    background-color: white;
-    /* position: absolute;
-    top: 50%;
-    left: 53px;
-    transform: translate(0, -50%); */
-    border-radius: 20px;
-}
-
-.featured-products h1 {
-    font-size: 45px;
-    font-weight: 600;
-    font-family: Archivo;
-    width: 80%;
-    position: absolute;
-    top: 50px;
 }
 
 .scroll {
@@ -47,7 +22,6 @@
     left: 50%;
     bottom: 40px;
     background-color: black;
-    border: 1px solid red !important;
 }
 
 .scroll-animation1, .scroll-animation2 {

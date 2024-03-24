@@ -8,11 +8,6 @@ const Home = () => {
 		<main>
 			<section className={styles['intro']}>
 				<img src={introVid} />
-				{/* <div className={styles['featured-products-wrapper']}>
-					<div className={styles['featured-products']}>
-						<h1>Browse our latest products</h1>
-					</div>
-				</div> */}
 				<aside className={styles['scroll']}>
 					<ScrollDown1 className={styles['scroll-btn']}/>
 					
