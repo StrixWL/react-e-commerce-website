@@ -12,7 +12,7 @@ const Layout = () => {
 		<div className={styles.layout}>
 			<Header />
 			<Outlet />
-			<div className="p-[500px]">
+			<div className="pb-[500px]">
 
 			</div>
 		</div>
