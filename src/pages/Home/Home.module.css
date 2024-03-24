@@ -1,0 +1,27 @@
+.intro {
+    position: relative;
+}
+
+.intro img {
+    width: 100%;
+}
+
+.featured-products {
+    width: 570px;
+    height: 270px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 53px;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+}
+
+.featured-products h1 {
+    font-size: 45px;
+    font-weight: 600;
+    font-family: Archivo;
+    width: 80%;
+    position: absolute;
+    top: 50px;
+}

@@ -1,4 +1,5 @@
-import SearchBar from "../../components/search-page/SearchBar";
+import ListItems from "../../components/search-page/MainPage/ItemsList/ListItems";
+import SearchBar from "../../components/search-page/SearchBar/SearchBar";
 
 const Search = () => {
   return (
@@ -9,7 +10,7 @@ const Search = () => {
 		</header>
 		<main>
 		{/* // List of items */}
-
+		<ListItems />
 		</main>
 		<footer>
 			{/* footer */}
