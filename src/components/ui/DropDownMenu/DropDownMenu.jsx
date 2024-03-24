@@ -17,9 +17,11 @@ const DropDownMenu = ({ className, items, current, onChange }) => {
             <ul style={{
                 display: showMenu ? 'block' : 'none'
             }} className={styles['dropdown-items']}>
-                {items.map((item, i) => {
-                    return <li key={i} className={styles['dropdown-item'] + (item == current ? (' ' + styles['active']) : '')}><button onClick={() => onChange(item)}>{item}</button></li>
-                })}
+                <div className={styles['items-wrapper']}>
+                    {items.map((item, i) => {
+                        return <li key={i} className={styles['dropdown-item'] + (item == current ? (' ' + styles['active']) : '')}><button onClick={() => onChange(item)}>{item}</button></li>
+                    })}
+                </div>
             </ul>
         </div>
     )
