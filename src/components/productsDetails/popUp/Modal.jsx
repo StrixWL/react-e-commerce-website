@@ -1,7 +1,5 @@
-
-
-import "./loader.css"
-const Modal = ({ isModalVisible }) => {
+import "./loader.css";
+const Modal = ({ isModalVisible, message, action }) => {
   return (
     <div
       className={` fixed flex flex-row backdrop-blur-md	space-x-4	 justify-center self-center items-center h-[200px] w-[500px] z-50 bg-[#ffffff62] text-[25px] mt-auto text-black border shadow-lg px-6 py-4 transition duration-700 ease-in-out  ${
@@ -12,10 +10,14 @@ const Modal = ({ isModalVisible }) => {
       <span className="loader"></span>
 
       <div className="flex flex-col  		 justify-center self-center items-start">
-      <span>Product added successfully!{"  "}</span>
-      <span className=" font-bold">Check your Cart</span>
+        <span>
+          {message ? message : "Product added successfully!"}
+          {"  "}
+        </span>
+        <span className=" font-bold">
+          {action ? action : "Check your Cart"}
+        </span>
       </div>
-
     </div>
   );
 };

@@ -28,9 +28,7 @@ const ProductDetails = ({
   const { addToCart } = useCart();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const {currentLocation} = useLocation()
-  useEffect(()=>{
-    console.log(currentLocation.split(' ')[1]);
-  })
+ 
   const changeMainImage = (newImage) => {
     setMainImage(newImage);
     setSelectedImage(newImage);
