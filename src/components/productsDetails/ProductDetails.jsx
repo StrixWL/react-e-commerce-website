@@ -7,8 +7,8 @@ import SizeChoices from "./productInfos/SizeChoices";
 import QuantitySelector from "./productInfos/QuantitySelector";
 import Addons from "./addOns/Addons";
 import Button from "../ui/Button";
-import PropTypes from "prop-types";
 import { useCart } from "../../store/cartContext/cartContext";
+import Modal from "./popUp/Modal";
 
 const ProductDetails = ({
   title,
@@ -18,7 +18,7 @@ const ProductDetails = ({
   description,
   colors,
   productId,
-  sizes
+  sizes,
 }) => {
   const [mainImage, setMainImage] = useState(imageTreeSrc[0]);
   const [selectedImage, setSelectedImage] = useState(imageTreeSrc[0]);
@@ -26,6 +26,7 @@ const ProductDetails = ({
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const changeMainImage = (newImage) => {
     setMainImage(newImage);
@@ -42,9 +43,15 @@ const ProductDetails = ({
       quantity: quantity,
     };
     addToCart(product, quantity);
+    setIsModalVisible(true);
+    setTimeout(() => setIsModalVisible(false), 3000);
   };
   return (
     <div className="flex flex-col pb-14 bg-white ">
+      {isModalVisible && (
+        
+          <Modal isModalVisible={isModalVisible} />
+      )}
       <div className="self-center mt-20 w-full max-w-[1201px] max-md:mt-10 max-md:max-w-full ">
         <div className="flex gap-5 max-md:flex-col max-md:gap-0 ">
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full h-auto ">
@@ -90,7 +97,7 @@ const ProductDetails = ({
                       <Button
                         className="px-4 py-3 rounded-3xl cursor-pointer w-full bg-white border-2 text-black"
                         click={handleAddToCart}
-                       // click={() => console.log("button clicked")}
+                        // click={() => console.log("button clicked")}
                         name={"Add to cart"}
                       />
                       <Button
@@ -113,6 +120,5 @@ const ProductDetails = ({
     </div>
   );
 };
-
 
 export default ProductDetails;
