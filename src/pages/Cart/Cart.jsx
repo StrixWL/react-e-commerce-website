@@ -4,7 +4,7 @@ import { useCart } from "../../store/cartContext/cartContext";
 import Header from "../../components/shoppCart/Header";
 import MyCart from "../../components/shoppCart/MyCart";
 
-const Cart = () => {
+const Cart = ({setShowCart}) => {
   const [cartVisible, setCartVisible] = useState(true);
   const { cartItems, removeFromCart } = useCart();
   const [quantity, setQuantity] = useState(1);
@@ -29,7 +29,7 @@ const Cart = () => {
         >
           <div
             className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
-            onClick={closeCart}
+            onClick={() => setShowCart(false)}
           ></div>
 
           <div className="fixed inset-0 overflow-hidden sm:w-screen"  >
@@ -38,9 +38,9 @@ const Cart = () => {
                 <div className="pointer-events-auto w-screen max-w-md">
                   <div className="flex h-full flex-col overflow-y-hidden sm:p-0 p-2 bg-white shadow-xl">
                     <div className="flex-1 overflow-y-auto  sm:px-6">
-                      <Header closeCart={closeCart} />
+                      <Header setShowCart={setShowCart} />
                       <MyCart
-                        goToLandingPage={goToLandingPage}
+                        goToLandingPage={() => setShowCart(false)}
                         cartItems={cartItems}
                         setQuantity={setQuantity}
                         formatPrice={formatPrice}
@@ -59,7 +59,7 @@ const Cart = () => {
                       </p>
                       <div className="mt-6">
                         <Button
-                          click={closeCart}
+                          click={() => setShowCart(false)}
                           className={
                             "px-4 py-3 rounded-3xl cursor-pointer w-full bg-black text-white"
                           }

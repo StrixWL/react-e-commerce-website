@@ -5,7 +5,6 @@ import Product from "./pages/Product/Product";
 import Layout from "./pages/Layout/Layout";
 import NoPage from "./pages/NoPage/NoPage";
 import "./App.css";
-import Cart from "./pages/Cart/Cart";
 import { CartProvider } from "./store/cartContext/cartContext";
 import TrackingOrder from "./pages/Tracking/TrackingOrder";
 import LoginPage from "./pages/Login/LoginPage";
@@ -20,7 +19,6 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="search" element={<Search />} />
-            <Route path="cart" element={<Cart />} />
             <Route path="tracking" element={<TrackingOrder />} />
             <Route path="login" element={<LoginPage />} />
             <Route path="contact" element={<ContactPage />} />

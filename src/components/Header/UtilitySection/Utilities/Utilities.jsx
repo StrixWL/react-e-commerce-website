@@ -6,14 +6,14 @@ import DropDownMenu from "../../../ui/DropDownMenu/DropDownMenu";
 import useLocation from "../../../../hooks/useLocation";
 import { locations } from "../../../../data/locations";
 import SearchButton from "../../../ui/SearchButton/SearchButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Cart from "../../../../pages/Cart/Cart";
 import { useCart } from "../../../../store/cartContext/cartContext";
 
 const Utilities = ({setShowNav}) => {
 	const { currentLocation, changeLocation } = useLocation();
 	const [showCart, setShowCart] = useState(false);
-	const { cartItems, removeFromCart } = useCart();
+	const { cartItems } = useCart();
 	return (
 		<div className={styles["utilities"]}>
 			<DropDownMenu
@@ -30,7 +30,7 @@ const Utilities = ({setShowNav}) => {
 				<img src={cartIcon}></img>
 				<span className={styles['cart-count']}>{cartItems.length}</span>
 			</div>
-			{showCart && <Cart />} 
+			{showCart && <Cart setShowCart={setShowCart} />} 
 		
 		</div>
 	);

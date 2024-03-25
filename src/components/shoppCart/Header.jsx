@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({closeCart}) => {
+const Header = ({setShowCart}) => {
   return (
     <div>
       <header className="flex items-center justify-between">
@@ -14,7 +14,7 @@ const Header = ({closeCart}) => {
           <button
             type="button"
             className="relative -m-2 p-2 text-gray-400 hover:text-gray-500"
-            onClick={closeCart}
+            onClick={() => setShowCart(false)}
           >
             <span className="absolute -inset-0.5"></span>
             <span className="sr-only">Close panel</span>
