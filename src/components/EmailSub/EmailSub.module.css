@@ -21,7 +21,7 @@
 }
 
 .links {
-    width: 80%;
+    width: 85.5%;
     height: 100%;
     max-width: 1160px;
     display: flex;
@@ -213,7 +213,7 @@
     height: 17px;
 }
 
-@media screen and (max-width: 989px) {
+@media screen and (max-width: 749px) {
     .email-sub-content h1 {
         font-size: 32px;
     }
@@ -224,10 +224,18 @@
         left: 50%;
         bottom: 10%;
         transform: translate(-50%, -50%);
+        width: 70%;
+        max-width: 200px;
     }
     .socials {
         right: 50%;
         bottom: 50%;
         transform: translate(50%, -50%);
+    }
+}
+
+@media screen and (max-width: 267px) {
+    .follow-shop-btn {
+        display: none;
     }
 }
