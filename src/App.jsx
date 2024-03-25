@@ -10,6 +10,7 @@ import { CartProvider } from "./store/cartContext/cartContext";
 import TrackingOrder from "./pages/Tracking/TrackingOrder";
 import LoginPage from "./pages/Login/LoginPage";
 import ContactPage from "./pages/Contact/ContactPage";
+import SizingChart from "./pages/SizingChart/SizingChart";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
             <Route path="login" element={<LoginPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="product/:productId" element={<Product />} />
-              
+            <Route path="sizing chart" element={<SizingChart />} />
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>
