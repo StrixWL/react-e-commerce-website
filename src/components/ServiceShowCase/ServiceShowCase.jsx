@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const ServiceShowCase = () => {
 	return (
-		<div className={styles['wrapper']}>
+		<div data-aos-once="true" data-aos="fade-up" className={styles['wrapper']}>
 			<div className={styles["service-show-case"]}>
                 <div className={styles['img']}>
                     <img src={img}/>
