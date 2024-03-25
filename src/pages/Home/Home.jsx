@@ -3,6 +3,7 @@ import introVid from '../../assets/introVid.webp'
 import ScrollDown1 from '../../components/ui/ScrollDown1/ScrollDown1';
 import ScrollDown2 from '../../components/ui/ScrollDown2/ScrollDown2';
 import ServiceShowCase from './ServiceShowCase/ServiceShowCase';
+import ServicePerks from './ServicePerks/ServicePerks';
 
 const Home = () => {
 	return (
@@ -17,6 +18,7 @@ const Home = () => {
 					{/* spent so much time on this but ended up not looking so good : ( */}
 				</aside>
 			</section>
+			<ServicePerks />
 			<ServiceShowCase />
 
 		</main>
