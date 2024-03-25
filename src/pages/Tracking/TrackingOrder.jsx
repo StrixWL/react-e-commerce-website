@@ -2,7 +2,7 @@ import React from "react";
 
 const TrackingOrder = () => {
   return (
-    <div className="flex flex-col items-center min-h-screen p-4">
+    <div className="flex flex-col items-center min-h-screen p-4 z-0">
         <header className="text-center mb-12 mt-12">
           <h1 className="text-3xl md:text-3xl lg:text-4xl font-bold">Track Your Order</h1>
         </header>
