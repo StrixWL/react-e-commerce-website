@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -31,14 +31,16 @@ const ProductItem = ({
     const productId = getProductIdByName(title);
     navigate(`/product/${productId}`);
   };
-
+  useEffect(()=>{
+    setImageSrc(beforeHoverImage)
+  })
   return (
     <section className="product-item-section">
       <Card
         className="card"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{"border": "none", "box-shadow": "none"}}
+        style={{"border": "none", "boxShadow": "none"}}
       >
         <CardMedia
           className="media motion-reduce"
