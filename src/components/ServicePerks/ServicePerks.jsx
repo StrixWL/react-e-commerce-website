@@ -6,7 +6,7 @@ import reviewsIcon from '../../assets/reviews.svg'
 
 const ServicePerks = () => {
 	return (
-		<div className={styles['wrapper']}>
+		<div data-aos-once="true" data-aos="fade-up" className={styles['wrapper']}>
             <div className={styles['service-perks']}>
                 <div className={styles['free-shipping']}>
                     <img src={truckIcon} />
