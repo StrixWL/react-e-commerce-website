@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import addonImage from "../../../pages/assets/details/greenAmzigh.jfif"; // Example image, replace with your actual addon image path
-
+import addonImage from "../../../assets/details/greenAmzigh.jfif";
 const Addons = () => {
   const [selectedAddons, setSelectedAddons] = useState([]);
   const [quantity, setQuantity] = useState(1);

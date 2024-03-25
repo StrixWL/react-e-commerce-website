@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Button from "../../ui/Button";
+import Button from "../../components/ui/Button";
 import { useCart } from "../../store/cartContext/cartContext";
 import Header from "../../components/shoppCart/Header";
 import MyCart from "../../components/shoppCart/MyCart";

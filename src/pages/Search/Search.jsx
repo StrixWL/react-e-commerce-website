@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
-import ListItems from "../../components/search-page/MainPage/ItemsList/ListItems";
-import SearchBar from "../../components/search-page/SearchBar/SearchBar";
+import ListItems from "../../components/searchPage/MainPage/ItemsList/ListItems";
+import SearchBar from "../../components/searchPage/SearchBar/SearchBar";
 import { ProductTitlesContext } from "../../store/searchContext/searchContext";
 
 const Search = () => {
