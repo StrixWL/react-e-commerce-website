@@ -13,6 +13,7 @@ const ProductItem = ({
   afterHoverImage,
   priceBefore,
   priceAfter,
+  index,
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [imageSrc, setImageSrc] = useState(beforeHoverImage);
@@ -31,16 +32,21 @@ const ProductItem = ({
     const productId = getProductIdByName(title);
     navigate(`/product/${productId}`);
   };
-  useEffect(()=>{
-    setImageSrc(beforeHoverImage)
-  })
+  useEffect(() => {
+    setImageSrc(beforeHoverImage);
+  });
   return (
-    <section className="product-item-section">
+    <section
+      className="product-item-section"
+      data-aos-duration={700 + (index % 4) * 400}
+      data-aos-once="true"
+      data-aos="fade-up"
+    >
       <Card
         className="card"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        style={{"border": "none", "boxShadow": "none"}}
+        style={{ border: "none", boxShadow: "none" }}
       >
         <CardMedia
           className="media motion-reduce"
