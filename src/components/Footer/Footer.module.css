@@ -1,0 +1,119 @@
+.page-footer {
+	background-color: #0a0a0a;
+	height: 254px;
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	display: flex;
+}
+
+.footer-wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	margin: 0 auto;
+	width: 88.5%;
+	max-width: 1170px;
+}
+
+.country-region h2 {
+	color: #ffffffbf;
+	font-size: 14px;
+}
+
+.country-region-items {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.dropdown-menu-wrapper {
+	border: 1px solid rgba(255, 255, 255, 0.8);
+	display: inline-block;
+	padding: 7px 15px;
+	border-radius: 20px;
+	margin: 10px 17px;
+}
+
+.country-region {
+	grid-area: 1 / 1 / 3 / 2;
+	position: relative;
+}
+
+.footer-credit {
+	grid-area: 3 / 1 / 4 / 3;
+}
+
+.footer-credit {
+	text-align: center;
+	color: rgba(255, 255, 255, 0.75);
+	font-size: 12px;
+}
+
+.footer-credit p {
+	position: relative;
+	top: 20px;
+}
+
+.dropdown-menu ul {
+	top: -235px;
+	left: -10px;
+}
+
+.payment-methods {
+	grid-area: 1 / 2 / 3 / 3;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	position: relative;
+	top: 10px;
+	width: 100%;
+}
+
+.payment-methods-content {
+	height: 50px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end;
+	gap: 10px;
+}
+
+@media screen and (max-width: 749px) {
+	.footer-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+	}
+	.footer-credit {
+        flex: 1;
+        width: 100%;
+	}
+	.country-region {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+	}
+	.payment-methods {
+        flex: .5;
+        width: 100%;
+        display: flex;
+        justify-content: center
+    }
+    .payment-methods-content {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .dropdown-menu ul {
+        top: -235px;
+        left: -55px;
+    }
+}
+
+@media screen and (max-width: 267px) {
+    .footer-credit {
+        visibility: hidden;
+    }
+}
