@@ -38,6 +38,7 @@ const ProductItem = ({
         className="card"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
+        style={{"border": "none"}}
       >
         <CardMedia
           className="media motion-reduce"
