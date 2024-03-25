@@ -17,7 +17,9 @@ const Layout = () => {
 	return (
 		<div className={styles.layout}>
 			<Header />
-			<Outlet />
+			<div className={styles['wrapper']}>
+				<Outlet />
+			</div>
 			<div data-aos-once="true" data-aos="fade-up">
 				<EmailSub />
 				<Footer />
