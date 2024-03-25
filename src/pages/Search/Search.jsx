@@ -3,7 +3,6 @@ import ListItems from "../../components/searchPage/MainPage/ItemsList/ListItems"
 import SearchBar from "../../components/searchPage/SearchBar/SearchBar";
 import { ProductTitlesContext } from "../../store/searchContext/searchContext";
 
-
 const Search = () => {
   const [matchedProducts, setMatchedProducts] = useState([]);
   const productTitles = useContext(ProductTitlesContext);
@@ -14,7 +13,6 @@ const Search = () => {
     );
     setMatchedProducts(filteredProducts);
   };
-  
   return (
     <section className="search-section">
       <header>

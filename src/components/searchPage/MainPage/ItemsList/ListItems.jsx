@@ -9,7 +9,7 @@ const ListItems = ({ matchedProducts }) => {
   const [productsInfo, setProductsInfo] = useState([]);
 
   useEffect(() => {
-    const fetchProductsInfo = async () => {
+    const fetchProductsInfo = () => {
       const info = matchedProducts.map((title) => {
         const productInfo = getProductInfoByTitle(title);
         return productInfo;

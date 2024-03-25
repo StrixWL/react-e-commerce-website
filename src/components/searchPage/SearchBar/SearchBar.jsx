@@ -14,6 +14,12 @@ const SearchBar = ({ onSearch }) => {
 
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
+      const selectedOption = productTitles.find(
+        (option) => option === inputValue
+      );
+      if (selectedOption) {
+        setInputValue(selectedOption);
+      }
       onSearch(inputValue.trim());
     }
   };
