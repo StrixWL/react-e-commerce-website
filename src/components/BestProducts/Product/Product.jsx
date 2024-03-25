@@ -24,8 +24,8 @@ const Product = ({
 			<img className={styles['before-hover-image']} src={beforeHoverImage} />
 			<div className={styles["item-infos"]}>
 				<h1>{title}</h1>
-				<div className={styles["price-before"]}>{priceBefore ? currentLocation.split(' ')[1] : ""}{priceBefore}</div>{" "}
-				<div className={styles["price-after"]}>{currentLocation.split(' ')[1]}{priceAfter}</div>
+				<div className={styles["price-before"]}>{priceBefore ? (currentLocation ? currentLocation.split(' ')[1] : '€') : ""}{priceBefore}</div>{" "}
+				<div className={styles["price-after"]}>{(currentLocation ? currentLocation.split(' ')[1] : '€')}{priceAfter}</div>
 			</div>
             <button className={styles['buy-btn']}>Buy now</button>
 		</Link>
