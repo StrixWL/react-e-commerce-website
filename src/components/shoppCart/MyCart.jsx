@@ -6,7 +6,7 @@ const MyCart = ({cartItems, formatPrice, setQuantity, removeFromCart, goToLandin
   return (
     <div>
       {cartItems.length > 0 ? (
-        <section className="mt-8">
+        <section className="mt-8 ">
           <div className="flow-root">
             <ul role="list" className="-my-6 divide-y divide-gray-200">
               {cartItems.map((item) => (
