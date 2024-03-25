@@ -10,7 +10,7 @@ import { useState } from "react";
 import Cart from "../../../../pages/Cart/Cart";
 import { useCart } from "../../../../store/cartContext/cartContext";
 
-const Utilities = () => {
+const Utilities = ({setShowNav}) => {
 	const { currentLocation, changeLocation } = useLocation();
 	const [showCart, setShowCart] = useState(false);
 	const { cartItems, removeFromCart } = useCart();
@@ -22,7 +22,7 @@ const Utilities = () => {
 				onChange={changeLocation}
 				className={styles['dropdown-menu']}
 			/>
-			<SearchButton className={styles['search']} />
+			<SearchButton setShowNav={setShowNav} className={styles['search']} />
 			<Link className={styles["login"]} to="/login">
 				<img src={loginIcon}></img>
 			</Link>

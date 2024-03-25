@@ -22,7 +22,7 @@ const UtilitySection = ({showNav, setShowNav}) => {
 					<img src={headerLogo} alt="Logo" />
 				</Link>
 			</div>
-			<Utilities />
+			<Utilities setShowNav={setShowNav}/>
 		</section>
 	);
 };
