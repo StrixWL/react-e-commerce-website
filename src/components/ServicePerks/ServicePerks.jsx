@@ -1,8 +1,8 @@
 import styles from "./ServicePerks.module.css";
-import truckIcon from '../../../assets/truck.svg'
-import tagIcon from '../../../assets/tag.svg'
-import exchangeIcon from '../../../assets/exchange.svg'
-import reviewsIcon from '../../../assets/reviews.svg'
+import truckIcon from '../../assets/truck.svg'
+import tagIcon from '../../assets/tag.svg'
+import exchangeIcon from '../../assets/exchange.svg'
+import reviewsIcon from '../../assets/reviews.svg'
 
 const ServicePerks = () => {
 	return (

@@ -1,5 +1,5 @@
 import styles from "./ServiceShowCase.module.css";
-import img from '../../../assets/imazighenhh.webp'
+import img from '../../assets/imazighenhh.webp'
 import { Link } from "react-router-dom";
 
 const ServiceShowCase = () => {
