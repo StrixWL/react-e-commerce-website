@@ -6,7 +6,7 @@ import Colors from "./productInfos/Colors";
 import SizeChoices from "./productInfos/SizeChoices";
 import QuantitySelector from "./productInfos/QuantitySelector";
 import Addons from "./addOns/Addons";
-import Button from "../../ui/Button";
+import Button from "../ui/Button";
 import PropTypes from "prop-types";
 import { useCart } from "../../store/cartContext/cartContext";
 
