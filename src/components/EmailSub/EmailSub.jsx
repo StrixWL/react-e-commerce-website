@@ -17,7 +17,7 @@ const EmailSub = () => {
 						offers.
 					</p>
 					<form className={styles["email-sub-form"]}>
-						<label for="email">
+						<label htmlFor="email">
 							<input
 								type="text"
 								id="email"
