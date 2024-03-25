@@ -9,11 +9,12 @@ const Product = () => {
 
   useEffect(() => {
     const data = getProductFromId(parseInt(productId));
-    console.log(data);
-    data.images = data.images.map((image) => image.original);
-    console.log(data.images);
-    setProductData(data);
+    if (data && data.images) {
+      const updatedImages = data.images.map((image) => image.original);
+      setProductData({ ...data, images: updatedImages });
+    }
   }, [productId]);
+  
   return (
     <>
       {productData && (
