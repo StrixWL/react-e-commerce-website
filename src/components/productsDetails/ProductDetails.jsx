@@ -52,7 +52,7 @@ const ProductDetails = ({
               <div className="mb-4">
                 <ZoomImage src={mainImage} alt="Product Image" />
               </div>
-              <div className="flex justify-center  w-full items-center">
+              <div className="flex justify-start flex-wrap w-[100%] items-center">
                 {imageTreeSrc.map((src, index) => (
                   <ImageThumbnail
                     key={index}
@@ -66,7 +66,7 @@ const ProductDetails = ({
           </div>
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col max-md:mt-10 max-md:max-w-full">
-              <div className="flex flex-col ml-5 max-w-full w-[426px]">
+              <div className="flex flex-col p-2 max-w-full w-[426px]">
                 <Details title={title} price={price} oldPrice={oldPrice} />
                 <div className="flex flex-col mt-4 space-y-3">
                   <Colors

@@ -67,7 +67,7 @@ const Addons = () => {
                 id="size-select"
                 //value={selectedSize}
                 //onChange={handleSizeChange}
-                className="bg-white border text-black px-4 py-1 rounded-xl cursor-pointer"
+                className="bg-white border text-black px-2 py-1 rounded-xl cursor-pointer"
               >
                 <option value="S">S</option>
                 <option value="M">M</option>
