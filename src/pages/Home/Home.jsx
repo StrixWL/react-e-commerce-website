@@ -4,6 +4,7 @@ import ScrollDown1 from '../../components/ui/ScrollDown1/ScrollDown1';
 import ScrollDown2 from '../../components/ui/ScrollDown2/ScrollDown2';
 import ServiceShowCase from '../../components/ServiceShowCase/ServiceShowCase';
 import ServicePerks from '../../components/ServicePerks/ServicePerks';
+import BestProducts from '../../components/BestProducts/BestProducts';
 
 const Home = () => {
 	return (
@@ -18,7 +19,8 @@ const Home = () => {
 					{/* spent so much time on this but ended up not looking so good : ( */}
 				</aside>
 			</section>
-			
+			<h1 className={styles['products-header']}>Best products</h1>
+			<BestProducts />
 			<ServicePerks />
 			<ServiceShowCase />
 

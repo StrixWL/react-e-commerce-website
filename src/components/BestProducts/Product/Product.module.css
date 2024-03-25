@@ -1,0 +1,114 @@
+.wrapper {
+    border: 1px black solid;
+    height: 35em;
+    display: block;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.item-infos {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 1.3em;
+    font-weight: 500;
+    width: 15em;
+    top: 18em;
+    /* top: 0; */
+}
+
+.item-infos h1 {
+    margin-bottom: .2em;
+}
+
+.price-before {
+    font-size: .8em;
+    font-weight: 400;
+    text-decoration: line-through;
+    left: 2em;
+    text-decoration-thickness: .2px;
+    display: inline;
+}
+
+.price-after {
+    display: inline;
+}
+
+.wrapper span {
+    position: absolute;
+}
+
+.wrapper a {
+    position: absolute;
+}
+
+.buy-btn {
+    width: 5em;
+    height: 5em;
+    display: block;
+    position: absolute;
+    bottom: .8em;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 1.3em;
+    border: .1em solid black;
+    height: 3em;
+    width: 7em;
+    border-radius: 5em;
+}
+
+@media (max-width: 989px) {
+    .wrapper {
+        height: 53em;
+    }
+    .item-infos {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 2.02em;
+        font-weight: 500;
+        width: 15em;
+        top: 18em;
+        /* top: 0; */
+    }
+    .buy-btn {
+        width: 10em;
+    }
+}
+
+@media (max-width: 749px) {
+    .wrapper {
+        height: 118em;
+    }
+    .item-infos {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 4.3em;
+        font-weight: 500;
+        width: 15em;
+        top: 18em;
+        /* top: 0; */
+    }
+    .buy-btn {
+        width: 5em;
+        height: 5em;
+        display: block;
+        position: absolute;
+        bottom: .8em;
+        left: 50%;
+        transform: translate(-50%, 0);
+        font-size: 5em;
+        border: .1em solid black;
+        height: 3em;
+        width: 7em;
+        border-radius: 5em;
+    }
+}

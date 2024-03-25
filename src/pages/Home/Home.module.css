@@ -39,6 +39,14 @@
     right: 50px;
 }
 
+.products-header {
+    font-size: 30px;
+    font-weight: 500;
+    margin: 50px;
+    margin-left: 10vw;
+    margin-bottom: 30px;
+}
+
 @media screen and (max-width: 989px) {
     .intro img {
         height: calc(100vh - 76px);
