@@ -33,7 +33,7 @@ const ProductDetails = ({
   };
   const handleAddToCart = () => {
     const product = {
-      id: productId, // Make sure to pass productId as prop or retrieve it in this component
+      id: productId,
       title,
       price,
       image: mainImage,

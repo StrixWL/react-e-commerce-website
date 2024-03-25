@@ -20,6 +20,8 @@ const productDetailItem = [
           "https://images.pexels.com/photos/2697787/pexels-photo-2697787.jpeg?auto=compress&cs=tinysrgb&w=600",
       },
     ],
+    beforeImage: "https://afrikabrand.com/cdn/shop/files/1-3a88699d-eb75-4906-86ae-349ce6ca020d-_1.png?v=1700771482&width=493",
+    afterImage: "",
     id: 1,
     title: "Timeless Palestine Hoodie: A Tribute to Heritage and Hope",
     reviews: "150",
@@ -56,6 +58,8 @@ const productDetailItem = [
       },
       
     ],
+    beforeImage: "https://afrikabrand.com/cdn/shop/files/1-84a3ff44-e57a-4bae-9dfc-390ed16e8f50-_1.png?v=1703605533&width=493",
+    afterImage: "",
     id: 2,
     title: "Imazighen Heritage Hoodie",
     reviews: "150",
@@ -92,6 +96,9 @@ const productDetailItem = [
       },
       
     ],
+    
+    beforeImage :  "https://afrikabrand.com/cdn/shop/files/fearnone.png?v=1704141502&width=493",
+    afterImage :  "https://afrikabrand.com/cdn/shop/files/fearnone.png?v=1704141502&width=493",
     id: 3,
     title: "AFRIKA | ARIF INO Hoodie: Unveil Your Amazigh Style",
     reviews: "150",
@@ -107,5 +114,7 @@ const productDetailItem = [
     color: ["violet", "red"],
   },
 ];
+
+export const testItems = [...productDetailItem]
 
 export default productDetailItem;

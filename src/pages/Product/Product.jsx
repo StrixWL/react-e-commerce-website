@@ -11,7 +11,7 @@ const Product = () => {
     const data = getProductFromId(parseInt(productId));
     console.log(data);
     data.images = data.images.map((image) => image.original);
-
+    console.log(data.images);
     setProductData(data);
   }, [productId]);
   return (

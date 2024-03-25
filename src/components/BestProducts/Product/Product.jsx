@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Product.module.css";
+import { useEffect } from "react";
+import test from '../../../assets/products/fearnone.webp'
 // title={item.title}
 // beforeHoverImage={item.images[0].original}
 // afterHoverImage={item.images[0].original}
@@ -13,6 +15,9 @@ const Product = ({
 	priceAfter,
     id
 }) => {
+	useEffect(() => {
+		console.log(id)
+	})
 	return (
 		<Link to={"/product/" + id} className={styles["wrapper"]}>
 			<img src={beforeHoverImage} />

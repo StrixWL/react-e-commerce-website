@@ -1,18 +1,22 @@
 import styles from "./BestProducts.module.css";
 import productDetailItem from "../../data/data";
+import { testItems } from "../../data/data";
 import Product from "./Product/Product";
+import { useState } from "react";
 
 const BestProducts = () => {
+	const [items, setItems] = useState(testItems)
 	return (
 		<div className={styles["wrapper"]}>
 			<ul className={styles['items']}>
-			{productDetailItem.map((item, i) => {
+			{testItems.map((item, i) => {
+					console.log("hh", item.images.map(i => i.original))
 					return (
 						<li key={i}>
 							<Product
 								title={item.title}
-								beforeHoverImage={item.images[0].original}
-								afterHoverImage={item.images[0].original}
+								beforeHoverImage={item.beforeImage}
+								afterHoverImage={item.afterImage}
 								priceBefore={item.previousPrice}
 								priceAfter={item.price}
 								id={item.id}
@@ -20,7 +24,7 @@ const BestProducts = () => {
 						</li>
 					);
 				})}
-				{productDetailItem.map((item, i) => {
+				{/* {testItems.map((item, i) => {
 					return (
 						<li key={i}>
 							<Product
@@ -32,7 +36,7 @@ const BestProducts = () => {
 							/>
 						</li>
 					);
-				})}
+				})} */}
 			</ul>
 		</div>
 	);
