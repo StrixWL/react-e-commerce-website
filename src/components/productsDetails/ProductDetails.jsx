@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ZoomImage from "./productImages/ZoomImage";
 import ImageThumbnail from "./productImages/ImageThumbnail";
 import Details from "./productInfos/Details";
@@ -9,7 +9,7 @@ import Addons from "./addOns/Addons";
 import Button from "../ui/Button";
 import { useCart } from "../../store/cartContext/cartContext";
 import Modal from "./popUp/Modal";
-
+import useLocation from "../../hooks/useLocation";
 const ProductDetails = ({
   title,
   imageTreeSrc,
@@ -27,7 +27,10 @@ const ProductDetails = ({
   const [quantity, setQuantity] = useState(1);
   const { addToCart } = useCart();
   const [isModalVisible, setIsModalVisible] = useState(false);
-
+  const {currentLocation} = useLocation()
+  useEffect(()=>{
+    console.log(currentLocation.split(' ')[1]);
+  })
   const changeMainImage = (newImage) => {
     setMainImage(newImage);
     setSelectedImage(newImage);
@@ -74,7 +77,7 @@ const ProductDetails = ({
           <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
             <div className="flex flex-col max-md:mt-10 max-md:max-w-full">
               <div className="flex flex-col p-2 max-w-full w-[426px]">
-                <Details title={title} price={price} oldPrice={oldPrice} />
+                <Details title={title} price={price} oldPrice={oldPrice} currentLocation={currentLocation}/>
                 <div className="flex flex-col mt-4 space-y-3">
                   <Colors
                     colors={colors}

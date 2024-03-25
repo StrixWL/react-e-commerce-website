@@ -22,7 +22,7 @@ const Product = () => {
           title={productData.title}
           imageTreeSrc={productData.images}
           price={productData.price}
-          oldPrice={productData.oldPrice}
+          oldPrice={productData.previousPrice}
           description={productData.description}
           colors={productData.color}
           sizes={productData.size}

@@ -23,7 +23,7 @@ const BestProducts = () => {
 						</li>
 					);
 				})}
-				{testItems.map((item, i) => {
+				{/* {testItems.map((item, i) => {
 					return (
 						<li key={i}>
 							<Product
@@ -36,7 +36,7 @@ const BestProducts = () => {
 							/>
 						</li>
 					);
-				})}
+				})} */}
 				{/* {testItems.map((item, i) => {
 					return (
 						<li key={i}>
