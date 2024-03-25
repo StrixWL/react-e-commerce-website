@@ -13,7 +13,7 @@ import { Link } from "react-router-dom";
 const NavBar = ({showNav, setShowNav}) => {
     const location = useLocation();
 	const { currentLocation, changeLocation } = useLocationHook();
-    const routes = ["product", "search", "catalog", "tracking", "blog", "contact"]
+    const routes = ["product", "search", "catalog", "tracking", "blog", "contact", "sizing chart"]
     return (
         <nav className={styles['nav-bar'] + (showNav ? (' ' + styles['active']) : '')}>
             <ul className={styles['nav-items']}>

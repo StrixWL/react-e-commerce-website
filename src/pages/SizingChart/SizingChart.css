@@ -1,0 +1,24 @@
+.sizingChartSection {
+  padding-top: 36px;
+  padding-bottom: 28px;
+  margin-right: 150px;
+  margin-left: 150px;
+}
+
+.sizingChartSection h1 {
+  font-size: 4rem;
+  font-family: Archivo;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 749px) {
+  .sizingChartSection {
+    padding-top: 0px;
+    margin: 10px 20px;
+  }
+  .sizingChartSection h1 {
+    font-size: 10px;
+    margin-bottom: 2rem;
+  }
+}
