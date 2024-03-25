@@ -11,6 +11,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    width: 90%;
 }
 
 .item-infos {
@@ -63,6 +64,23 @@
     width: 7em;
     border-radius: 5em;
 }
+
+.wrapper:hover .before-hover-image {
+    visibility: hidden;
+}
+
+.wrapper .after-hover-image {
+    visibility: hidden;
+    opacity: .7;
+    transition: opacity, transform .3s ease;
+}
+
+.wrapper:hover .after-hover-image {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 0) scale(1.1);
+}
+
 
 @media (max-width: 989px) {
     .wrapper {
