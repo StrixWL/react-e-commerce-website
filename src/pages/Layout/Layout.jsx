@@ -14,9 +14,6 @@ const Layout = () => {
 		<div className={styles.layout}>
 			<Header />
 			<Outlet />
-			<div className="pb-[500px]">
-
-			</div>
 			<EmailSub />
 			<Footer />
 		</div>
