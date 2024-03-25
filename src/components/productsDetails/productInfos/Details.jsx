@@ -12,7 +12,7 @@ const Details = ({ title, price, oldPrice, currentLocation}) => {
         </div>
         <div className="flex justify-start items-center  max-md:flex-wrap">
           <div className=" my-auto text-4xl font-semibold text-black leading-[53px] tracking-[2.16px]">
-            <span className="text-xl line-through mr-4">{currentLocation.split(' ')[1]}{oldPrice}</span>
+            <span className="text-xl line-through mr-4">{oldPrice ? currentLocation.split(' ')[1] : ""}{oldPrice}</span>
             <span className="text-3xl mr-4">{currentLocation.split(' ')[1]}{price}</span>
           </div>
           <div className="justify-center h-8 items-center px-2 text-lg tracking-widest whitespace-nowrap bg-white border border-solid border-stone-400  text-neutral-400 max-md:pr-5">
