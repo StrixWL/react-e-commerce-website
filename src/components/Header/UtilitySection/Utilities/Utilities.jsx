@@ -8,10 +8,12 @@ import { locations } from "../../../../data/locations";
 import SearchButton from "../../../ui/SearchButton/SearchButton";
 import { useState } from "react";
 import Cart from "../../../../pages/Cart/Cart";
+import { useCart } from "../../../../store/cartContext/cartContext";
 
 const Utilities = () => {
 	const { currentLocation, changeLocation } = useLocation();
-	const [showCart, setShowCart] = useState(false); 
+	const [showCart, setShowCart] = useState(false);
+	const { cartItems, removeFromCart } = useCart();
 	return (
 		<div className={styles["utilities"]}>
 			<DropDownMenu
@@ -26,6 +28,7 @@ const Utilities = () => {
 			</Link>
 			<div className={styles["cart"]} onClick={() => setShowCart(!showCart)}>
 				<img src={cartIcon}></img>
+				<span className={styles['cart-count']}>{cartItems.length}</span>
 			</div>
 			{showCart && <Cart />} 
 		
