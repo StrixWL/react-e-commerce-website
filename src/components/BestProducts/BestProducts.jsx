@@ -5,12 +5,10 @@ import Product from "./Product/Product";
 import { useState } from "react";
 
 const BestProducts = () => {
-	const [items, setItems] = useState(testItems)
 	return (
 		<div className={styles["wrapper"]}>
 			<ul className={styles['items']}>
 			{testItems.map((item, i) => {
-					console.log("hh", item.images.map(i => i.original))
 					return (
 						<li key={i}>
 							<Product
