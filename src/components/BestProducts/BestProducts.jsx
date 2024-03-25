@@ -1,13 +1,11 @@
 import styles from "./BestProducts.module.css";
 import productDetailItem from "../../data/data";
-import { testItems } from "../../data/data";
+import items from "../../data/data";
 import Product from "./Product/Product";
 import { useEffect, useRef, useState } from "react";
 
 const BestProducts = () => {
 	const [columnsCount, setColumnsCount] = useState(-1)
-	const _items = [...testItems, ...testItems,...testItems, ...testItems, ...testItems, ...testItems]
-	const ref = useRef(null)
 	useEffect(() => {
 		if (window.innerWidth > 989)
 			setColumnsCount(3)
@@ -17,9 +15,9 @@ const BestProducts = () => {
 			setColumnsCount(1)
 	})
 	return (
-		<div id="ref" ref={ref} className={styles["wrapper"]}>
+		<div className={styles["wrapper"]}>
 			<ul className={styles["items"]}>
-			{_items.map((item, i) => {
+			{items.map((item, i) => {
 					return (
 						<li data-aos-duration={700 + (i % columnsCount) * 400} data-aos-once="true" data-aos="fade-up" key={i}>
 							<Product

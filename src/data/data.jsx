@@ -323,6 +323,4 @@ const productDetailItem = [
   },
 ];
 
-export const testItems = [...productDetailItem];
-
 export default productDetailItem;
