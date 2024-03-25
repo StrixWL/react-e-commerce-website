@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import getProductInfoByTitle from "../../../../utils/searchFunctions/getProductFromTitle";
 import ProductItem from "../ProductItem/ProductItem";
 import "./ListItems.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ListItems = ({ matchedProducts }) => {
   const [productsInfo, setProductsInfo] = useState([]);
@@ -14,13 +16,14 @@ const ListItems = ({ matchedProducts }) => {
       });
       setProductsInfo(info);
     };
-
     fetchProductsInfo();
   }, [matchedProducts]);
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className="list-items-section">
-      <section className="product-list">
+      <section className="product-list" data-aos="fade-up">
         {productsInfo.map((productInfo, index) => (
           <ProductItem
             key={index}

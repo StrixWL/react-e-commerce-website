@@ -15,12 +15,10 @@ const Product = ({
 	priceAfter,
     id
 }) => {
-	useEffect(() => {
-		console.log(id)
-	})
 	return (
 		<Link to={"/product/" + id} className={styles["wrapper"]}>
-			<img src={beforeHoverImage} />
+			<img className={styles['after-hover-image']} src={afterHoverImage} />
+			<img className={styles['before-hover-image']} src={beforeHoverImage} />
 			<div className={styles["item-infos"]}>
 				<h1>{title}</h1>
 				<div className={styles["price-before"]}>{priceBefore}</div>{" "}
