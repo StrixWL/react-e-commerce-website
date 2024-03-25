@@ -1,0 +1,18 @@
+/* ListItems.css */
+
+.list-items-section {
+  padding: 0 5rem;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+}
+
+@media (max-width: 749px) {
+  .list-items-section {
+    padding: 0;
+  }
+}

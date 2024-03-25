@@ -5,20 +5,31 @@ import Product from "./pages/Product/Product";
 import Layout from "./pages/Layout/Layout";
 import NoPage from "./pages/NoPage/NoPage";
 import "./App.css";
+import { CartProvider } from "./store/cartContext/cartContext";
+import TrackingOrder from "./pages/Tracking/TrackingOrder";
+import LoginPage from "./pages/Login/LoginPage";
+import ContactPage from "./pages/Contact/ContactPage";
+import SizingChart from "./pages/SizingChart/SizingChart";
 
 function App() {
-	return (
-		<BrowserRouter>
-			<Routes>
-			  <Route path="/" element={<Layout />}>
-				<Route index element={<Home />} />
-				<Route path="search" element={<Search />} />
-				<Route path="product" element={<Product />} />
-				<Route path="*" element={<NoPage />} />
-			  </Route>
-			</Routes>
-		</BrowserRouter>
-	);
+  return (
+    <CartProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="search" element={<Search />} />
+            <Route path="tracking" element={<TrackingOrder />} />
+            <Route path="login" element={<LoginPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="product/:productId" element={<Product />} />
+            <Route path="sizing chart" element={<SizingChart />} />
+            <Route path="*" element={<NoPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
+  );
 }
 
 export default App;

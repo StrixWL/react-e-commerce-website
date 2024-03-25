@@ -1,0 +1,19 @@
+.layout {
+    /* margin-top: 151px; */
+}
+
+.wrapper {
+    min-height: calc(100vh - 678px - 151px);
+}
+
+@media screen and (max-width: 989px) {
+    .wrapper {
+        min-height: calc(100vh - 754px);
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .wrapper {
+        min-height: calc(100vh - 744px);
+    }
+}

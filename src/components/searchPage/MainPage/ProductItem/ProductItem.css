@@ -1,0 +1,70 @@
+:root {
+  --border-width: 0.1rem;
+}
+
+.full-unstyled-link {
+  text-decoration: none;
+  font-family: "Archivo";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.price-item {
+  font-family: "Questrial", sans-serif;
+}
+
+.price-item--last {
+  color: rgb(10, 10, 10);
+}
+
+.product-item-section {
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 1.8rem;
+  border-width: 0.1rem;
+  border-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc((25% - var(--border-width) * 2) - 18px);
+}
+
+.media {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  padding: 16px;
+}
+
+.badge {
+  top: 0;
+  left: 20px;
+}
+
+@media (max-width: 989px) {
+  .product-item-section {
+    width: calc(
+      (50% - var(--border-width) * 2) - 20px
+    );
+  }
+  .full-unstyled-link {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.06rem;
+  }
+  .price-item--last {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 749px) {
+  .product-item-section {
+    width: calc(
+      (100% - var(--border-width) * 2) - 20px
+    );
+  }
+  .full-unstyled-link {
+    font-size: 1.3rem;
+  }
+}
