@@ -20,7 +20,7 @@ const Layout = () => {
 			<div className={styles['wrapper']}>
 				<Outlet />
 			</div>
-			<div data-aos-once="true" data-aos="fade-up">
+			<div className={styles['page-bottom']} data-aos-once="true" data-aos="fade-up">
 				<EmailSub />
 				<Footer />
 			</div>
