@@ -3,18 +3,23 @@ import Button from "../../components/ui/Button";
 import { useCart } from "../../store/cartContext/cartContext";
 import Header from "../../components/shoppCart/Header";
 import MyCart from "../../components/shoppCart/MyCart";
+import { useNavigate } from "react-router";
 
-const Cart = ({setShowCart}) => {
+const Cart = ({ setShowCart }) => {
   const [cartVisible, setCartVisible] = useState(true);
   const { cartItems, removeFromCart } = useCart();
   const [quantity, setQuantity] = useState(1);
-
+  const navigate = useNavigate();
   const formatPrice = (price) =>
     parseFloat(price.replace("€", "").replace(",", "."));
   const total = cartItems
     .reduce((acc, item) => acc + formatPrice(item.price) * item.quantity, 0)
     .toFixed(2);
 
+  const handleCheckout = () => {
+    setShowCart(false); // Fermez le panier
+    navigate("/payment"); // Naviguez vers la page de paiement
+  };
   const closeCart = () => setCartVisible(false);
   const goToLandingPage = () => setCartVisible(false);
   return (
@@ -25,14 +30,13 @@ const Cart = ({setShowCart}) => {
           aria-labelledby="slide-over-title"
           role="dialog"
           aria-modal="true"
-          
         >
           <div
             className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
             onClick={() => setShowCart(false)}
           ></div>
 
-          <div className="fixed inset-0 overflow-hidden sm:w-screen"  >
+          <div className="fixed inset-0 overflow-hidden sm:w-screen">
             <div className="absolute inset-0 overflow-hidden">
               <div className=" fixed inset-y-0 right-0 flex ">
                 <div className="pointer-events-auto w-screen max-w-md">
@@ -59,7 +63,7 @@ const Cart = ({setShowCart}) => {
                       </p>
                       <div className="mt-6">
                         <Button
-                          click={() => setShowCart(false)}
+                          click={handleCheckout}
                           className={
                             "px-4 py-3 rounded-3xl cursor-pointer w-full bg-black text-white"
                           }
@@ -72,7 +76,6 @@ const Cart = ({setShowCart}) => {
               </div>
             </div>
           </div>
-
         </div>
       )}
     </>

@@ -10,6 +10,7 @@ import TrackingOrder from "./pages/Tracking/TrackingOrder";
 import LoginPage from "./pages/Login/LoginPage";
 import ContactPage from "./pages/Contact/ContactPage";
 import SizingChart from "./pages/SizingChart/SizingChart";
+import Payment from "./pages/Payment/Payment";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="sizing chart" element={<SizingChart />} />
             <Route path="*" element={<NoPage />} />
           </Route>
+          <Route path="payment" element={<Payment />} />
         </Routes>
       </BrowserRouter>
     </CartProvider>
