@@ -26,8 +26,8 @@ function App() {
             <Route path="product/:productId" element={<Product />} />
             <Route path="sizing chart" element={<SizingChart />} />
             <Route path="*" element={<NoPage />} />
-          </Route>
           <Route path="payment" element={<Payment />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </CartProvider>

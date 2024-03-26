@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../../components/ui/Button";
 import { useCart } from "../../store/cartContext/cartContext";
 import Header from "../../components/shoppCart/Header";
@@ -10,18 +10,20 @@ const Cart = ({ setShowCart }) => {
   const { cartItems, removeFromCart } = useCart();
   const [quantity, setQuantity] = useState(1);
   const navigate = useNavigate();
+  const [isDisabled, setIsDisabled] = useState(false);
   const formatPrice = (price) =>
     parseFloat(price.replace("€", "").replace(",", "."));
   const total = cartItems
     .reduce((acc, item) => acc + formatPrice(item.price) * item.quantity, 0)
     .toFixed(2);
-
+  useEffect(() => {
+    if (cartItems.length == 0) setIsDisabled(true);
+  });
   const handleCheckout = () => {
-    setShowCart(false); // Fermez le panier
-    navigate("/payment"); // Naviguez vers la page de paiement
+    setShowCart(false);
+    navigate("/payment");
   };
-  const closeCart = () => setCartVisible(false);
-  const goToLandingPage = () => setCartVisible(false);
+
   return (
     <>
       {cartVisible && (
@@ -63,6 +65,7 @@ const Cart = ({ setShowCart }) => {
                       </p>
                       <div className="mt-6">
                         <Button
+                          isDisabled={isDisabled}
                           click={handleCheckout}
                           className={
                             "px-4 py-3 rounded-3xl cursor-pointer w-full bg-black text-white"

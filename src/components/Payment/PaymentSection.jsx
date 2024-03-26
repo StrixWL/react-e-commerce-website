@@ -49,7 +49,7 @@ const PaymentSection = () => {
             required
             value={creditCard}
             onChange={handleCreditCardChange}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className="mt-1 block w-full px-3 py-3 border border-gray-300 rounded-3xl text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
           />
         </div>
         <div className=" flex justify-between items-center space-x-4">
@@ -70,7 +70,7 @@ const PaymentSection = () => {
             required
             value={cvv}
             onChange={(e) => setCvv(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className="mt-1 block w-full px-3 py-3 border border-gray-300 rounded-3xl text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
           />
         </div>
 
@@ -88,7 +88,7 @@ const PaymentSection = () => {
             required
             value={expiryDate}
             onChange={(e) => setExpiryDate(e.target.value)}
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+            className="mt-1 block w-full px-3 py-3 border border-gray-300 rounded-3xl text-sm shadow-sm placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
           />
         </div>
         </div>

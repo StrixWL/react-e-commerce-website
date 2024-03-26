@@ -1,9 +1,9 @@
 
 
-const Button = ({ className, click, name }) => {
+const Button = ({ className, click, name, isDisabled }) => {
   return (
     <div>
-      <button className={className} onClick={click}>
+      <button className={`${className} ${isDisabled ? 'bg-slate-700 cursor-not-allowed':''}`} onClick={click} disabled={isDisabled} >
         {name}
       </button>
     </div>
