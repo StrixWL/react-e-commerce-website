@@ -1,7 +1,7 @@
 import styles from "./BestProducts.module.css";
 import Product from "./Product/Product";
 import { useEffect, useState } from "react";
-import { getProduct } from "../../service/ProductService";
+import { getProduct } from "../../services/ProductService";
 
 const BestProducts = () => {
   const [columnsCount, setColumnsCount] = useState(-1);
@@ -10,7 +10,6 @@ const BestProducts = () => {
   useEffect(() => {
     (async () => {
       const data = await getProduct();
-      console.log(data);
       setItems(data);
     })();
   },[]);
