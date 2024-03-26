@@ -10,7 +10,7 @@ const ContactPage = () => {
           <div className="mb-4 flex items-center justify-between space-x-3">
             <TextField
               id="outlined-basic"
-              label="name"
+              label="Name"
               className="w-full"
               variant="outlined"
               fullWidth

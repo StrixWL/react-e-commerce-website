@@ -1,8 +1,7 @@
-import productDetailItem from "../../data/data";
+import { getProductById } from "../../service/ProductService";
 
-const getProductFromId = (productId) => {
-  const product = productDetailItem.find((item) => item.id === productId);
-
+const getProductFromId = async  (productId) => {
+  const product = await  getProductById(productId);
   return product;
 };
 export default getProductFromId;
