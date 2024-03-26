@@ -3,17 +3,14 @@
 }
 
 .wrapper {
-    min-height: calc(100vh - 678px - 151px);
+    min-height: calc(100vh - 809px);
+    display: flex;
+    flex-direction: column;
 }
+
 
 @media screen and (max-width: 989px) {
     .wrapper {
-        min-height: calc(100vh - 754px);
-    }
-}
-
-@media screen and (max-width: 749px) {
-    .wrapper {
-        min-height: calc(100vh - 744px);
+        min-height: calc(100vh - 734px);
     }
 }
