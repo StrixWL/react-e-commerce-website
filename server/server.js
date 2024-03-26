@@ -1,23 +1,26 @@
 /* express & parsers */
 import express from 'express';
-import bodyParser from 'body-parser';
 import cookieParser from 'cookie-parser';
+/* constants */
+import { port } from './Config/constants.js'
 /* server */
 import http from 'http';
 import cors from 'cors';
 /* handlers */
 import prodcuts from './src/routes/products/getProducts.js';
+import emailSub from './src/routes/newsletter/emailSub.js';
 
 const app = express();
 const server = http.createServer(app);
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cookieParser());
 app.use(cors({credentials: true, origin: '*'}));
 
 app.get('/api/products', prodcuts)
 app.get('/api/products/:id', prodcuts)
+app.post('/api/submit-email', emailSub)
 
-server.listen(3000, () => {
-	console.log(`Listening on port ${3000}`);
+server.listen(port, () => {
+	console.log(`Listening on port ${port}`);
 });
