@@ -32,9 +32,7 @@ const ProductItem = ({
     const productId = getProductIdByName(title);
     navigate(`/product/${productId}`);
   };
-  useEffect(() => {
-    setImageSrc(beforeHoverImage);
-  });
+
   return (
     <section
       className="product-item-section"
